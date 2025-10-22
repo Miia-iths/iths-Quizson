@@ -19,7 +19,7 @@ class Quiz {
     
     public ArrayList<String> selectQuestions(String mode) {
         ArrayList<String> selectedList = new ArrayList<>();
-
+//
         if (mode.equals("Random")) {
             selectedList.add("Fråga Random 1");
             selectedList.add("Fråga Random 2");
