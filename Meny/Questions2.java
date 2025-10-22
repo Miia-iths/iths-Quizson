@@ -109,8 +109,6 @@ public class Questions2 {
 
         int [] rättSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
-
         for(int i = 0; i< frågor.length; i++){
             list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
         }
