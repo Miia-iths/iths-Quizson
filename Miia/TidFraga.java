@@ -5,16 +5,19 @@ public class TidFraga {
     public static void main(String[] args) {
         
         long totalTidRattSvarMillis;
+        long totalTidFragaMillis;
 
         long startTidFraga = System.currentTimeMillis();
         
         //fråga koden här
        
         long slutTidFraga = System.currentTimeMillis();
-        long totalTidFragaMillis = slutTidFraga - startTidFraga;
+
+        totalTidFragaMillis = slutTidFraga - startTidFraga;
+        totalTidKvarMillis = 6000 - totalTidFragaMillis;
         
         //behöver rättsvar koden
-        if ((totalTidFragaMillis > 0) && (svar = rattSvar)){
+        if ((totalTidKvarMillis > 0) && (svar = rattSvar)){
             totalTidRattSvarMillis = totalTidFragaMillis - 6000; //om 60sek
         }
     
