@@ -16,6 +16,7 @@ public class Main {
 }
 
 class Quiz {
+    
     public ArrayList<String> selectQuestions(String mode) {
         ArrayList<String> selectedList = new ArrayList<>();
 
@@ -27,6 +28,6 @@ class Quiz {
             selectedList.add("Fråga Random 2");
         }
 
-    +    return selectedList;
+        return selectedList;
     }
 }
