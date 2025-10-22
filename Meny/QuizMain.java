@@ -15,13 +15,12 @@ public class QuizMain {
  
         if (val == 1){
             System.out.println("Du valde blandade kategorier");
-                RandomQuiz.startQuiz();
+            System.out.println();
+                RandomQuiz1.startQuiz();
         } else {
             Scanner scanner = new Scanner (System.in);
 
             System.out.println("Du valde specefika kategorier");
-                //Välja kategori här
-            System.out.println("");
             System.out.println("**********************************");
             System.out.println("Välj mellan de fyra olika teman: ");
             System.out.println("1. Allmänbildning");
@@ -29,6 +28,7 @@ public class QuizMain {
             System.out.println("3. Vetenskap");
             System.out.println("4. Sport");
             System.out.print("Skriv in 1-4: ");
+        
 
             int valet = scanner.nextInt();
 
