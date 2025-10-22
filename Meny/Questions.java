@@ -1,3 +1,5 @@
+package Meny;
+import java.util.Scanner;
 public class Questions {
     
     public static void allmänbildningsQuiz(){
@@ -28,7 +30,10 @@ public class Questions {
         };
 
         int [] rättSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
-    }
+
+        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+}
+    
 
     public static void sportQuiz(){
         String [] frågor = {
@@ -58,6 +63,10 @@ public class Questions {
         };
 
         int [] rättSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
+
+        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+
+        
     }
 
     public static void vetenskapQuiz(){
@@ -88,6 +97,8 @@ public class Questions {
         };
 
         int [] rättSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
+
+        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
     }
 
     public static void seriefilmQuiz(){
@@ -116,7 +127,9 @@ public class Questions {
             {"1. The Dark Passenger", "2. The Inner Demon", "3. The Shadow Killer", "4. Mr. Hyde"},
             {"1. Hamlin, Hamlin & McGill", "2. Wexler & Associates", "3. Davis & Main", "4. Mesa Verde Law Group"}
         };
-        
+
         int[] rättSvar = {2, 2, 2, 3, 2, 3, 3, 3, 1, 1};
+
+        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
     }
 }
