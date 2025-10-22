@@ -11,6 +11,8 @@ public class Main {
         System.out.println("Prova mode Kategorier:");
         System.out.println(quiz.selectQuestions("Kategorier"));
     }
+
+
 }
 
 class Quiz {
@@ -25,6 +27,6 @@ class Quiz {
             selectedList.add("Fråga Random 2");
         }
 
-        return selectedList;
+    +    return selectedList;
     }
 }
