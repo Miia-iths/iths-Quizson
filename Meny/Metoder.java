@@ -1,7 +1,5 @@
 package Meny;
-
-public class Metoder {
-    import java.util.Scanner;
+import java.util.Scanner;
 
 public class Metoder{
 
@@ -31,4 +29,3 @@ public class Metoder{
     }
 }
 
-}
