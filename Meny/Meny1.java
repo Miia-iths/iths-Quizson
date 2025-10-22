@@ -1,4 +1,4 @@
-11package Meny;
+package Meny;
 import java.util.Scanner;
 
 public class Meny1 {
