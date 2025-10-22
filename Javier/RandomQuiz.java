@@ -4,9 +4,18 @@ import java.util.ArrayList;
 
 public class RandomQuiz {
 
-     public static ArrayList<String> selectQuestions(String mode) {
-        ArrayList<String> selectedList = new ArrayList<>();
+        System.out.println("Prova mode Kategorier:");
+        System.out.println(quiz.selectQuestions("Kategorier"));
+    }
 
+
+}
+
+class Quiz {
+    
+    public ArrayList<String> selectQuestions(String mode) {
+        ArrayList<String> selectedList = new ArrayList<>();
+//
         if (mode.equals("Random")) {
             selectedList.add("Fråga Random 1");
             selectedList.add("Fråga Random 2");
