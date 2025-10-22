@@ -1,7 +1,9 @@
 package Meny;
 import java.util.Scanner;
 
-public class Meny1 {
+import Javier.RandomQuiz;
+
+public class QuizMain {
     public static void main(String[] args) {
         System.out.println("Välkommna till Quizsons frågesport!!!");
         System.out.println("Spelreglerna är enkla: ");
@@ -13,7 +15,7 @@ public class Meny1 {
  
         if (val == 1){
             System.out.println("Du valde blandade kategorier");
-                //Startar spelet här
+                RandomQuiz.startQuiz();
         } else {
             Scanner scanner = new Scanner (System.in);
 
