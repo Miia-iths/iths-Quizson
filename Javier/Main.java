@@ -27,6 +27,6 @@ class Quiz {
             selectedList.add("Fråga Random 2");
         }
 
-    +    return selectedList;
+        return selectedList;
     }
 }
