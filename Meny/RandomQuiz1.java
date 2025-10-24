@@ -2,6 +2,7 @@ package Meny;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class RandomQuiz1 {
     public static void startQuiz(){
@@ -14,14 +15,25 @@ public class RandomQuiz1 {
 
         Collections.shuffle(allaFrågor);
 
-        System.out.println("Random quiz: ");
-        int antal = 0;
-        for (Fråga f : allaFrågor){
-            f.visaFråga();
-            System.out.println();
-            antal++;
-            if(antal == 10) break;
-        }
-    }
+        Scanner scan = new Scanner(System.in);
+        int poäng = 0;
 
+        for (int i = 0; i < 10; i++) {
+            Fråga f = allaFrågor.get(i);
+            System.out.println("Fråga " + (i + 1) + ": ");
+            f.visaFråga();
+
+            System.out.print("Ditt svar (1-4): ");
+            int svar = scan.nextInt();
+
+            if (svar == f.rättSvarIndex) {
+                System.out.println("Rätt svar!");
+                poäng++;
+            } else {
+                System.out.println(f.alternativ[f.rättSvarIndex - 1]);
+            }
+        }
+
+        System.out.println("Du fick " + poäng + " av 10 rätt!");
+    }
 }
