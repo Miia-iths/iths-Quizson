@@ -1,10 +1,11 @@
 package Meny;
-import java.util.Scanner;
+import java.util.ArrayList;
 
-public class Questions {
+public class Questions2 {
     
-    public static void allmänbildningsQuiz(){
-        String [] frågor = {
+    public static ArrayList<Fråga> allmänbildningsQuiz(){
+        ArrayList<Fråga> list = new ArrayList<>();
+            String [] frågor = {
             "Vilken kontinent är störst till ytan?",
             "Vilken krydda ingår INTE i klassiska pepparkakor?",
             "Vilket land har flest öar i världen?",
@@ -32,11 +33,15 @@ public class Questions {
 
         int [] rättSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
-}
-    
+        for(int i = 0; i< frågor.length; i++){
+            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        }
+        
+        return list;
+    }
 
-    public static void sportQuiz(){
+        public static ArrayList<Fråga> sportQuiz(){
+            ArrayList<Fråga> list = new ArrayList<>();
         String [] frågor = {
             "Sveriges förbundskapten Jon Dahl Tommasson blev avskedad den 14 oktober efter en rad svaga resultat. Vem blev hans ersättare?",
             "Vem av de nuvarande förarna i F1 har vunnit flest VM titlar?",
@@ -65,12 +70,17 @@ public class Questions {
 
         int [] rättSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+        for(int i = 0; i< frågor.length; i++){
+            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        }
+        
+        return list;
 
         
     }
 
-    public static void vetenskapQuiz(){
+    public static ArrayList<Fråga> vetenskapQuiz(){
+            ArrayList<Fråga> list = new ArrayList<>();
         String [] frågor = {
             "Hur många hjärtan har en spindel?",
             "Vilken av följande metoder är inte ett sätt för växter att få näring?",
@@ -99,10 +109,15 @@ public class Questions {
 
         int [] rättSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+        for(int i = 0; i< frågor.length; i++){
+            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        }
+        
+        return list;
     }
 
-    public static void seriefilmQuiz(){
+        public static ArrayList<Fråga> seriefilmQuiz(){
+            ArrayList<Fråga> list = new ArrayList<>();
         String[] frågor = {
             "Vem regisserade kultfilmen Pulp Fiction från 1994, en film känd för sin icke-linjära berättarstruktur?",
             "Jon Snow är en nyckelfigur i Game of Thrones. Vilket hus betraktade han sig själv som en del av under större delen av serien?",
@@ -131,6 +146,11 @@ public class Questions {
 
         int[] rättSvar = {2, 2, 2, 3, 2, 3, 3, 3, 1, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+        for(int i = 0; i< frågor.length; i++){
+            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        }
+        
+        return list;
+        }
+
     }
-}
