@@ -1,5 +1,7 @@
-package Meny;
+package Johan;
 import java.util.Scanner;
+
+import Meny.visaMenyn;
 
 public class Meny1 {
     public static void main(String[] args) {
