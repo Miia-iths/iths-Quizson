@@ -9,7 +9,7 @@ public class RandomQuiz {
         Quiz quiz = new Quiz(); 
         ArrayList<String> frågor = quiz.selectQuestions("Random");
 
-        System.out.println("\n¡Comienza el quiz!");
+        System.out.println("\n¡Spela!");
         for (String fråga : frågor) {
             System.out.println("- " + fråga);
         }
