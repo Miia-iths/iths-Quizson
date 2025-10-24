@@ -28,7 +28,3 @@ public class Metoder{
     System.out.println("Du fick " + poäng + " av " + frågor.length + " rätt!");
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> dd422e4 (snälla funka)
