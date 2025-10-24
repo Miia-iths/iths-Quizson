@@ -31,6 +31,7 @@ public class RandomQuiz1 {
                 antalRätt++;
             } else {
                 System.out.println(f.alternativ[f.rättSvarIndex - 1]);
+                //ÄNDRA
             }
         }
 

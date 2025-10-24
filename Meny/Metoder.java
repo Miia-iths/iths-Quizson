@@ -1,7 +1,6 @@
 package Meny;
 import java.util.Scanner;
 
-
 public class Metoder{
 
     public static void frågorOchSvar(String [] frågor, String [][] svarsAlternativ, int []rättSvar){
