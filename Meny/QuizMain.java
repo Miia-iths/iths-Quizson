@@ -13,6 +13,7 @@ public class QuizMain {
         int val = visaMenyn.visaMenyn1();
  
         if (val == 1){
+            System.out.println();
             System.out.println("Du valde blandade kategorier");
             System.out.println();
             RandomQuiz1.startQuiz();
@@ -28,8 +29,7 @@ public class QuizMain {
             System.out.println("3. Vetenskap");
             System.out.println("4. Sport");
             System.out.print("Skriv in 1-4: ");
-        
-
+         
             int valet = scanner.nextInt();
 
             switch (valet) {
