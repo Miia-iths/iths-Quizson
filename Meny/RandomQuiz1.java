@@ -16,7 +16,7 @@ public class RandomQuiz1 {
         Collections.shuffle(allaFrågor);
 
         Scanner scan = new Scanner(System.in);
-        int poäng = 0;
+        int antalRätt = 0;
 
         for (int i = 0; i < 10; i++) {
             Fråga f = allaFrågor.get(i);
@@ -28,12 +28,12 @@ public class RandomQuiz1 {
 
             if (svar == f.rättSvarIndex) {
                 System.out.println("Rätt svar!");
-                poäng++;
+                antalRätt++;
             } else {
                 System.out.println(f.alternativ[f.rättSvarIndex - 1]);
             }
         }
 
-        System.out.println("Du fick " + poäng + " av 10 rätt!");
+        System.out.println("Du fick " + antalRätt + " av 10 rätt!");
     }
 }
