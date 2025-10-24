@@ -1,5 +1,5 @@
 package Meny;
-import java.util.Scanner;
+
 public class Questions {
     
     public static void allmänbildningsQuiz(){
@@ -32,7 +32,7 @@ public class Questions {
         int [] rättSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
 
         Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
-}
+    }
     
 
     public static void sportQuiz(){
@@ -64,9 +64,7 @@ public class Questions {
 
         int [] rättSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
-
-        
+        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);    
     }
 
     public static void vetenskapQuiz(){

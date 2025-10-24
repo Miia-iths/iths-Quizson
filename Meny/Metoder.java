@@ -1,12 +1,11 @@
 package Meny;
 import java.util.Scanner;
 
-
 public class Metoder{
 
     public static void frågorOchSvar(String [] frågor, String [][] svarsAlternativ, int []rättSvar){
         Scanner scanner = new Scanner(System.in);
-        int poäng = 0;
+        int antalRätt = 0;
         long startTidFraga;
         long totalTidFragaMillis = 0;
         long svarsTid = 0;
@@ -30,7 +29,7 @@ public class Metoder{
             System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
         } else if (svar == rättSvar[i]) {
             System.out.println("Rätt svar!");
-            poäng++;
+            antalRätt++;
             totalTidFragaMillis += svarsTid;
         } else {
             System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
@@ -39,7 +38,7 @@ public class Metoder{
     
     long slutTid = System.currentTimeMillis();
 
-    System.out.println("Du fick " + poäng + " av " + frågor.length + " rätt!");
+    System.out.println("Du fick " + antalRätt + " av " + frågor.length + " rätt!");
 
     long totalTidMillis = slutTid - startTid;
     int totalTidSekunder = (int) (totalTidMillis / 1000);
@@ -49,9 +48,9 @@ public class Metoder{
 
     int totalTidFragaSekunder = (int) (totalTidFragaMillis / 1000);
     int maxTidPerFråga = 60;
-    int totalMaxSekunder = poäng * maxTidPerFråga;
+    int totalMaxSekunder = antalRätt * maxTidPerFråga;
     int totalPoäng = totalMaxSekunder - totalTidFragaSekunder;
-    System.out.println("Du svarade de " + poäng + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoäng + " poäng!");
+    System.out.println("Du svarade de " + antalRätt + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoäng + " poäng!");
 
     }
 }
