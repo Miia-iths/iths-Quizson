@@ -18,6 +18,11 @@ public class TimerFraga {
 
         timer.schedule(task, 6000);
         timer.cancel();
+
+
+        /////timertask avbryts pga öppna scanners i väntan på user input, så jag kan inte använda den...
+        /// eller den kan säga att tiden är ute men väntar fortfarnde på input
+        /// så min idee nu är 
     }
     
 }

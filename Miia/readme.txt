@@ -1,55 +1,22 @@
-https://github.com/Miia-iths/iths-Quizson
+23/10
+När jag börjar ser jag att randomiseringen av frågor från kategorier fungerar ej ännu,
+men kan bli svårt att blanda när kategorierna är fristående metoder som fungerar finfint såklart
+men vet ej hur det ska kunna norpas frågor från vardera, men tror vi kan lösa det tillsammans
 
-https://docs.google.com/document/d/15taa9QHJX8c0faNT_e0D5Ju10aVy3urvs7jPgV-54Qc/edit?pli=1&tab=t.0
+Jag har klistrat in stoppur för hela frågeställningen in i Metoder.java
+och testat så den startar och stannar på rätt ställe.
+Totaltiden delas sen in i minuter och sekunder för prydligare presentation.
 
-https://www.gitmastery.me/
+liten fråga - skulle vi kunna döpa om "poäng" till antalRättSvar eller liknande för tydlighet?
 
+Har iallafall löst så tiden det tar att svara sparas när de får rätt på frågan.
+Sen omvandlas det från millisekunder till sekunder,
+räknar ut poängen iom återstående tid det var kvar på frågorna,
+sen presenteras tillsammans med resten av statusen.
 
-uppgifter 20okt tills 22okt
-Miia:
-Skriva Film/Tv-serie frågor 10 frågor med 4 svarsalternativ.
-researcha tidnedräkning, tidsbegränsning, spara total tid, tilldela poäng per sekund.
+Hittade annan lösning istället för TimerTask,
+tyvärr fungerar inte den när scanner är öppen för user input så ja, lite simpålare lösning.
 
-Research
-1. Stoppur (Mäta hur snabbt spelaren svarar)
-    
-    //För att veta hur lång tid som gått, använd datorns inbyggda klocka:
-        long startTid = System.currentTimeMillis();
-    
-    //För att spara sluttiden (i long först för att få plats med milisekunder)
-        long slutTid = System.currentTimeMillis();
-    
-    //För att räkna ut tiden som har gått och konvertera (1000 millisekunder = 1 sekund)
-        long totalTidMillis = slutTid - startTid;
-        int totalTidSekunder = (int) (totalTidMillis / 1000);
-    
-2. Poängsätting för tiden -nooope inte vad jag kör sen
-    
-    //För att sätta max värdet (kan ändras om vi vill göra svarstiden längre)
-        int maxPoang = 60;
-        int poang = maxPoang - totalTidSekunder; 
-    
-    //För att se till att  poängen inte blir negativ
-        if (poang < 0) {
-            poang = 0;
-        }
-
-    //Lägg till i totalsumman
-        totalPoang = totalPoang + poang;
-
-3. Tidsbegränsning
-   
-    //chat gpt och gemini föreslår att använda TimerTask och override, 
-    men jag tror det går att återanvända System.currentTimeMillis()
-    att den sparar tiden för rätta svar tillsammans i rightMilliS eller så och räknar ut poäng först efter det
-    svar ja
-    så jag kodar klass för att starta tid när enskild fråga startas, och slutar när de frågat
-    om de svarar rätt så läggs den tiden det tog in i totalRightTimeMillis
-    som i slutet koverteras till sekunder och därmed poäng
-    fuck.. det tar bara tiden det tog.. de sätter inte begränsning.. skit oxå
+Klar för dagen, sparar och pushar
 
 
-
-kladd eftersom det ska räkna ner från tex 60 behöver rätt tiden vara 60 - millis
-eller så tar jag totalRightMillis minus 60*10 i själva poängräkningen - bättre val
-och i samma vända förvandlar till sekunder 
