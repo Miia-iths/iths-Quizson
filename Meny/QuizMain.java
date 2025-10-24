@@ -1,10 +1,9 @@
 package Meny;
 import java.util.Scanner;
 
-import Javier.RandomQuiz;
-
 public class QuizMain {
     public static void main(String[] args) {
+        System.out.println();
         System.out.println("Välkommna till Quizsons frågesport!!!");
         System.out.println("Spelreglerna är enkla: ");
         System.out.println("Du väljer om du vill ha blandade eller specefika kategorier på frågorna");
@@ -17,13 +16,13 @@ public class QuizMain {
             System.out.println();
             System.out.println("Du valde blandade kategorier");
             System.out.println();
-                RandomQuiz1.startQuiz();
+            RandomQuiz1.startQuiz();
+
         } else {
             Scanner scanner = new Scanner (System.in);
 
-            System.out.println();
-            System.out.println("Du valde specefika kategorier");
-            System.out.println();
+            System.out.println("Du valde specifika kategorier");
+            System.out.println("**********************************");
             System.out.println("Välj mellan de fyra olika teman: ");
             System.out.println("1. Allmänbildning");
             System.out.println("2. Film & serier");
@@ -35,19 +34,19 @@ public class QuizMain {
 
             switch (valet) {
                 case 1:
-                Questions.allmänbildningsQuiz();
-                break;
-            case 2:
-                Questions.seriefilmQuiz();
-                break;
-            case 3:
-                Questions.vetenskapQuiz();
-                break;
-            case 4:
-                Questions.sportQuiz();
-                break;
-            default:
-                System.out.println("Ogiltigt val! Välj en siffra mellan 1 och 4.");
+                    Questions.allmänbildningsQuiz();
+                    break;
+                case 2:
+                    Questions.seriefilmQuiz();
+                    break;
+                case 3:
+                    Questions.vetenskapQuiz();
+                    break;
+                case 4:
+                    Questions.sportQuiz();
+                    break;
+                default:
+                    System.out.print("Ogiltigt val! Välj en siffra mellan 1 och 4: ");
 
                 scanner.close();
             }

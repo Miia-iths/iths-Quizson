@@ -1,13 +1,11 @@
 package Miia;
 
 public class StoppUr {
-    //OBS, ej för att anropa hela klassen, klistra in i andra metoder
     public static void main(String[] args) {
-    //Sätt in detta där quizzet startas.
+
     //För att veta hur lång tid som gått, använd datorns inbyggda klocka:
         long startTid = System.currentTimeMillis();
     
-    //sätt in detta
     //För att spara sluttiden (i long först för att få plats med milisekunder)
         long slutTid = System.currentTimeMillis();
     
