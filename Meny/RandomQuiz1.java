@@ -15,6 +15,7 @@ public class RandomQuiz1 {
 
         Collections.shuffle(allaFrågor);
 
+        Scanner scanner = new Scanner(System.in);
         int antalRätt = 0;
 
         for (int i = 0; i < 10; i++) {
@@ -23,6 +24,8 @@ public class RandomQuiz1 {
             f.visaFråga();
 
             int svar = ValideraInput.läsHeltalIInterval(scanner, 1, 4, "Ditt svar (1-4): ");
+            System.out.print("Ditt svar (1-4): ");
+            int svar = scanner.nextInt();
 
             long slutTidFraga = System.currentTimeMillis();
             svarsTid = slutTidFraga - startTidFraga;
