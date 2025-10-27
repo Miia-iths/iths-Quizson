@@ -1,4 +1,4 @@
-package Meny;
+package Quizson;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

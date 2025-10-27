@@ -1,8 +1,8 @@
-package Meny;
+package Quizson;
 
 public class TidOchPoang {
     public static void tidPoang (long slutTid, long startTid, long startTidFraga, long totalTidFragaMillis, int antalRatt) {
-        
+
         long totalTidMillis = slutTid - startTid;
         int totalTidSekunder = (int) (totalTidMillis / 1000);
         int totalTidMinuter = totalTidSekunder / 60;
