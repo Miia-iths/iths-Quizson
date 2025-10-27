@@ -15,7 +15,7 @@ public class RandomQuiz1 {
 
         Collections.shuffle(allaFrågor);
 
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int antalRätt = 0;
 
         for (int i = 0; i < 10; i++) {
@@ -24,7 +24,7 @@ public class RandomQuiz1 {
             f.visaFråga();
 
             System.out.print("Ditt svar (1-4): ");
-            int svar = scan.nextInt();
+            int svar = scanner.nextInt();
 
             if (svar == f.rättSvarIndex) {
                 System.out.println("Rätt svar!");
