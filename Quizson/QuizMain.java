@@ -1,4 +1,4 @@
-package Meny;
+package Quizson;
 import java.util.Scanner;
 
 public class QuizMain {
@@ -10,12 +10,12 @@ public class QuizMain {
         System.out.println("Frågorna är från början värda ett visst antal poäng, men de minskar i värde ju längre tiden går");
         System.out.println("När tiden tar slut byter spelet automatiskt till nästa fråga");
  
-        int val = visaMenyn.visaMenyn1();
+        int val = beslutAvQuiz.beslut();
  
         if (val == 1){
             System.out.println("Du valde blandade kategorier");
             System.out.println();
-            RandomQuiz1.startQuiz();
+            blandadeFragorMetod.startQuiz();
 
         } else {
             Scanner scanner = new Scanner (System.in);
@@ -34,16 +34,16 @@ public class QuizMain {
 
             switch (valet) {
                 case 1:
-                    Questions.allmänbildningsQuiz();
+                    fragorSpecefika.allmanbildningsQuiz();
                     break;
                 case 2:
-                    Questions.seriefilmQuiz();
+                    fragorSpecefika.seriefilmQuiz();
                     break;
                 case 3:
-                    Questions.vetenskapQuiz();
+                    fragorSpecefika.vetenskapQuiz();
                     break;
                 case 4:
-                    Questions.sportQuiz();
+                    fragorSpecefika.sportQuiz();
                     break;
                 default:
                     System.out.print("Ogiltigt val! Välj en siffra mellan 1 och 4: ");

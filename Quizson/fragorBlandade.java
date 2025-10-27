@@ -1,11 +1,11 @@
-package Meny;
+package Quizson;
 import java.util.ArrayList;
 
-public class Questions2 {
+public class fragorBlandade {
     
-    public static ArrayList<Fråga> allmänbildningsQuiz(){
-        ArrayList<Fråga> list = new ArrayList<>();
-        String [] frågor = {
+    public static ArrayList<Fraga> allmanbildningsQuiz(){
+        ArrayList<Fraga> list = new ArrayList<>();
+        String [] fragor = {
             "Vilken kontinent är störst till ytan?",
             "Vilken krydda ingår INTE i klassiska pepparkakor?",
             "Vilket land har flest öar i världen?",
@@ -31,18 +31,18 @@ public class Questions2 {
                 {"1. 1969", "2. 1972", "3. 1974", "4. 1967"}
             };
 
-        int [] rättSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
+        int [] rattSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
 
-        for(int i = 0; i< frågor.length; i++){
-            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        for(int i = 0; i< fragor.length; i++){
+            list.add(new Fraga(fragor[i], svarsAlternativ[i], rattSvar[i]));
         }
         
         return list;
     }
 
-        public static ArrayList<Fråga> sportQuiz(){
-            ArrayList<Fråga> list = new ArrayList<>();
-            String [] frågor = {
+        public static ArrayList<Fraga> sportQuiz(){
+            ArrayList<Fraga> list = new ArrayList<>();
+            String [] fragor = {
                 "Sveriges förbundskapten Jon Dahl Tommasson blev avskedad den 14 oktober efter en rad svaga resultat. Vem blev hans ersättare?",
                 "Vem av de nuvarande förarna i F1 har vunnit flest VM titlar?",
                 "Den svenska pingisspelaren Truls Möregårdh tog sig till final i OS 2024. Vilket land slog ut honom?",
@@ -68,10 +68,10 @@ public class Questions2 {
                 {"1. Henrik Zetterbergn", "2. Peter Forsberg", "3. Mats Sundi", "4. Daniel Alfredsson"}
             };
 
-        int [] rättSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
+        int [] rattSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
 
-        for(int i = 0; i< frågor.length; i++){
-            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        for(int i = 0; i< fragor.length; i++){
+            list.add(new Fraga(fragor[i], svarsAlternativ[i], rattSvar[i]));
         }
         
         return list;
@@ -79,9 +79,9 @@ public class Questions2 {
         
     }
 
-    public static ArrayList<Fråga> vetenskapQuiz(){
-        ArrayList<Fråga> list = new ArrayList<>();
-        String [] frågor = {
+    public static ArrayList<Fraga> vetenskapQuiz(){
+        ArrayList<Fraga> list = new ArrayList<>();
+        String [] fragor = {
             "Hur många hjärtan har en spindel?",
             "Vilken av följande metoder är inte ett sätt för växter att få näring?",
             "Vilket är det enda organet som kan regenerera sig själv?",
@@ -107,18 +107,18 @@ public class Questions2 {
             {"1. Proxima Centauri", "2. Alfa Centauri 1", "3. Optimus Prime", "4. Alfa Centauri 2"}
         };
 
-        int [] rättSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
+        int [] rattSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
 
-        for(int i = 0; i< frågor.length; i++){
-            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        for(int i = 0; i< fragor.length; i++){
+            list.add(new Fraga(fragor[i], svarsAlternativ[i], rattSvar[i]));
         }
         
         return list;
     }
 
-        public static ArrayList<Fråga> seriefilmQuiz(){
-            ArrayList<Fråga> list = new ArrayList<>();
-            String[] frågor = {
+        public static ArrayList<Fraga> seriefilmQuiz(){
+            ArrayList<Fraga> list = new ArrayList<>();
+            String[] fragor = {
                 "Vem regisserade kultfilmen Pulp Fiction från 1994, en film känd för sin icke-linjära berättarstruktur?",
                 "Jon Snow är en nyckelfigur i Game of Thrones. Vilket hus betraktade han sig själv som en del av under större delen av serien?",
                 "Vem spelar huvudrollen Katniss Everdeen i filmserien The Hunger Games?",
@@ -144,10 +144,10 @@ public class Questions2 {
                 {"1. Hamlin, Hamlin & McGill", "2. Wexler & Associates", "3. Davis & Main", "4. Mesa Verde Law Group"}
             };
 
-        int[] rättSvar = {2, 2, 2, 3, 2, 3, 3, 3, 1, 1};
+        int[] rattSvar = {2, 2, 2, 3, 2, 3, 3, 3, 1, 1};
 
-        for(int i = 0; i< frågor.length; i++){
-            list.add(new Fråga(frågor[i], svarsAlternativ[i], rättSvar[i]));
+        for(int i = 0; i< fragor.length; i++){
+            list.add(new Fraga(fragor[i], svarsAlternativ[i], rattSvar[i]));
         }
         
         return list;

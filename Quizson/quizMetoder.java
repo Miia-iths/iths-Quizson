@@ -1,19 +1,19 @@
-package Meny;
+package Quizson;
 import java.util.Scanner;
 
-public class Metoder{
+public class quizMetoder{
 
-    public static void frågorOchSvar(String [] frågor, String [][] svarsAlternativ, int []rättSvar){
+    public static void fragorOchSvar(String [] fragor, String [][] svarsAlternativ, int []rattSvar){
         Scanner scanner = new Scanner(System.in);
-        int antalRätt = 0;
+        int antalRatt = 0;
         long startTidFraga;
         long totalTidFragaMillis = 0;
         long svarsTid = 0;
         long startTid = System.currentTimeMillis();
-        for (int i = 0; i < frågor.length; i++) {
+        for (int i = 0; i < fragor.length; i++) {
         
         startTidFraga = System.currentTimeMillis();
-        System.out.println("Fråga " + (i + 1) + ": " + frågor[i]);
+        System.out.println("Fråga " + (i + 1) + ": " + fragor[i]);
 
         for (String alt : svarsAlternativ[i]) {
             System.out.println(alt);
@@ -27,18 +27,18 @@ public class Metoder{
 
         if (svarsTid > 60000) {
             System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
-        } else if (svar == rättSvar[i]) {
+        } else if (svar == rattSvar[i]) {
             System.out.println("Rätt svar!");
-            antalRätt++;
+            antalRatt++;
             totalTidFragaMillis += svarsTid;
         } else {
-            System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
+            System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rattSvar[i] - 1]);
         }
     }
     
     long slutTid = System.currentTimeMillis();
 
-    System.out.println("Du fick " + antalRätt + " av " + frågor.length + " rätt!");
+    System.out.println("Du fick " + antalRatt + " av " + fragor.length + " rätt!");
 
     long totalTidMillis = slutTid - startTid;
     int totalTidSekunder = (int) (totalTidMillis / 1000);
@@ -47,10 +47,10 @@ public class Metoder{
     System.out.println("Din totala tid blev " + totalTidMinuter + " min och " + totalTidSekunderKvar + " sekunder.");
 
     int totalTidFragaSekunder = (int) (totalTidFragaMillis / 1000);
-    int maxTidPerFråga = 60;
-    int totalMaxSekunder = antalRätt * maxTidPerFråga;
-    int totalPoäng = totalMaxSekunder - totalTidFragaSekunder;
-    System.out.println("Du svarade de " + antalRätt + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoäng + " poäng!");
+    int maxTidPerFraga = 60;
+    int totalMaxSekunder = antalRatt * maxTidPerFraga;
+    int totalPoang = totalMaxSekunder - totalTidFragaSekunder;
+    System.out.println("Du svarade de " + antalRatt + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoang + " poäng!");
 
     }
 }

@@ -1,9 +1,9 @@
-package Meny;
+package Quizson;
 
-public class Questions {
+public class fragorSpecefika {
     
-    public static void allmänbildningsQuiz(){
-        String [] frågor = {
+    public static void allmanbildningsQuiz(){
+        String [] fragor = {
             "Vilken kontinent är störst till ytan?",
             "Vilken krydda ingår INTE i klassiska pepparkakor?",
             "Vilket land har flest öar i världen?",
@@ -29,14 +29,14 @@ public class Questions {
             {"1. 1969", "2. 1972", "3. 1974", "4. 1967"}
         };
 
-        int [] rättSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
+        int [] rattSvar = {3, 3, 3, 1, 2, 1, 1, 4, 4, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+        quizMetoder.fragorOchSvar(fragor, svarsAlternativ, rattSvar);
     }
     
 
     public static void sportQuiz(){
-        String [] frågor = {
+        String [] fragor = {
             "Sveriges förbundskapten Jon Dahl Tommasson blev avskedad den 14 oktober efter en rad svaga resultat. Vem blev hans ersättare?",
             "Vem av de nuvarande förarna i F1 har vunnit flest VM titlar?",
             "Den svenska pingisspelaren Truls Möregårdh tog sig till final i OS 2024. Vilket land slog ut honom?",
@@ -62,13 +62,13 @@ public class Questions {
             {"1. Henrik Zetterbergn", "2. Peter Forsberg", "3. Mats Sundi", "4. Daniel Alfredsson"}
         };
 
-        int [] rättSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
+        int [] rattSvar = {1, 1, 4, 2, 3, 1, 3, 4, 2, 3}; 
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);    
+        quizMetoder.fragorOchSvar(fragor, svarsAlternativ, rattSvar);    
     }
 
     public static void vetenskapQuiz(){
-        String [] frågor = {
+        String [] fragor = {
             "Hur många hjärtan har en spindel?",
             "Vilken av följande metoder är inte ett sätt för växter att få näring?",
             "Vilket är det enda organet som kan regenerera sig själv?",
@@ -94,13 +94,13 @@ public class Questions {
             {"1. Proxima Centauri", "2. Alfa Centauri 1", "3. Optimus Prime", "4. Alfa Centauri 2"}
         };
 
-        int [] rättSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
+        int [] rattSvar = {1, 3, 4, 1, 1, 2, 3, 4, 1, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+        quizMetoder.fragorOchSvar(fragor, svarsAlternativ, rattSvar);
     }
 
     public static void seriefilmQuiz(){
-        String[] frågor = {
+        String[] fragor = {
             "Vem regisserade kultfilmen Pulp Fiction från 1994, en film känd för sin icke-linjära berättarstruktur?",
             "Jon Snow är en nyckelfigur i Game of Thrones. Vilket hus betraktade han sig själv som en del av under större delen av serien?",
             "Vem spelar huvudrollen Katniss Everdeen i filmserien The Hunger Games?",
@@ -126,8 +126,8 @@ public class Questions {
             {"1. Hamlin, Hamlin & McGill", "2. Wexler & Associates", "3. Davis & Main", "4. Mesa Verde Law Group"}
         };
 
-        int[] rättSvar = {2, 2, 2, 3, 2, 3, 3, 3, 1, 1};
+        int[] rattSvar = {2, 2, 2, 3, 2, 3, 3, 3, 1, 1};
 
-        Metoder.frågorOchSvar(frågor, svarsAlternativ, rättSvar);
+        quizMetoder.fragorOchSvar(fragor, svarsAlternativ, rattSvar);
     }
 }

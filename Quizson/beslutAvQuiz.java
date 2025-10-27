@@ -1,10 +1,10 @@
-package Meny;
+package Quizson;
 
 import java.util.Scanner;
 
-public class visaMenyn {
+public class beslutAvQuiz {
     
-    public static int visaMenyn1(){
+    public static int beslut(){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println();
