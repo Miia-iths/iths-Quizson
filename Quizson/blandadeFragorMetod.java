@@ -26,11 +26,11 @@ public class blandadeFragorMetod {
             System.out.print("Ditt svar (1-4): ");
             int svar = scanner.nextInt();
 
-            if (svar == f.rattSvarIndex) {
+            if (svar == f.rattSvar) {
                 System.out.println("Rätt svar!");
                 antalRatt++;
             } else {
-                System.out.println(f.alternativ[f.rattSvarIndex - 1]);
+                System.out.println(f.alternativ[f.rattSvar - 1]);
                 //ÄNDRA
             }
         }

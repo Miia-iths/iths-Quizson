@@ -3,12 +3,12 @@ package Quizson;
 public class Fraga {
     String fraga;
     String[] alternativ;
-    int rattSvarIndex;
+    int rattSvar;
 
-    public Fraga(String fraga, String[] alternativ, int rattSvarIndex){
+    public Fraga(String fraga, String[] alternativ, int rattSvar){
         this.fraga = fraga;
         this.alternativ = alternativ;
-        this.rattSvarIndex = rattSvarIndex;
+        this.rattSvar = rattSvar;
     }
 
     public void visaFraga(){
