@@ -17,7 +17,7 @@ public class RandomQuiz1 {
 
         Scanner scan = new Scanner(System.in);
         int antalRätt = 0;
-        long startTidFraga;
+        long startTidFraga = 0;
         long totalTidFragaMillis = 0;
         long svarsTid = 0;
         long startTid = System.currentTimeMillis();
@@ -49,18 +49,7 @@ public class RandomQuiz1 {
         long slutTid = System.currentTimeMillis();
 
         System.out.println("Du fick " + antalRätt + " av 10 rätt!");
-
-        long totalTidMillis = slutTid - startTid;
-        int totalTidSekunder = (int) (totalTidMillis / 1000);
-        int totalTidMinuter = totalTidSekunder / 60;
-        int totalTidSekunderKvar = totalTidSekunder % 60;
-        System.out.println("Din totala tid blev " + totalTidMinuter + " min och " + totalTidSekunderKvar + " sekunder.");
-
-        int totalTidFragaSekunder = (int) (totalTidFragaMillis / 1000);
-        int maxTidPerFråga = 60;
-        int totalMaxSekunder = antalRätt * maxTidPerFråga;
-        int totalPoäng = totalMaxSekunder - totalTidFragaSekunder;
-        System.out.println("Du svarade de " + antalRätt + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoäng + " poäng!");
+        TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRätt);
 
     }
 }

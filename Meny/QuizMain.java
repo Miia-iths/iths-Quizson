@@ -8,7 +8,7 @@ public class QuizMain {
         System.out.println("Spelreglerna är enkla: ");
         System.out.println("Du väljer om du vill ha blandade eller specefika kategorier på frågorna");
         System.out.println("Frågorna är från början värda ett visst antal poäng, men de minskar i värde ju längre tiden går");
-        System.out.println("När tiden tar slut byter spelet automatiskt till nästa fråga");
+        System.out.println("Du har 60 sekunder på dig per fråga - Varje sekund räknas!");
  
         int val = visaMenyn.visaMenyn1();
  
