@@ -36,14 +36,16 @@ public class RandomQuiz1 {
                 System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
             } else if (svar == f.rättSvarIndex) {
                 System.out.println("✅ Rätt svar!");
+                System.out.println();
                 antalRätt++;
                 totalTidFragaMillis += svarsTid;
             } else {
                 System.out.println("❌ Fel! Rätt svar var: " + f.alternativ[f.rättSvarIndex - 1]);
+                System.out.println();
             }
         }
         
-        long slutTid = System.currentTimeMillis();S
+        long slutTid = System.currentTimeMillis();
 
         System.out.println("Du fick " + antalRätt + " av 10 rätt!");
         TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRatt);
