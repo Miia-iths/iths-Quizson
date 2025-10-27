@@ -29,12 +29,35 @@ public class quizMetoder{
             System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
         } else if (svar == rattSvar[i]) {
             System.out.println("Rätt svar!");
-            antalRatt++;
+            System.out.println();
+            antalRätt++;
             totalTidFragaMillis += svarsTid;
         } else {
-            System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rattSvar[i] - 1]);
+            System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
+            System.out.println();
+            startTidFraga = System.currentTimeMillis();
+            System.out.println("Fråga " + (i + 1) + ": " + frågor[i]);
+
+            for (String alt : svarsAlternativ[i]) {
+                System.out.println(alt);
+            }
+
+            System.out.print("Skriv in ditt svar (1-4): ");
+            int svar = scanner.nextInt();
+
+            long slutTidFraga = System.currentTimeMillis();
+            svarsTid = slutTidFraga - startTidFraga;
+
+            if (svarsTid > 60000) {
+                System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
+            } else if (svar == rättSvar[i]) {
+                System.out.println("Rätt svar!");
+                antalRätt++;
+                totalTidFragaMillis += svarsTid;
+            } else {
+                System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
+            }
         }
-    }
     
     long slutTid = System.currentTimeMillis();
 
@@ -52,5 +75,8 @@ public class quizMetoder{
     int totalPoang = totalMaxSekunder - totalTidFragaSekunder;
     System.out.println("Du svarade de " + antalRatt + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoang + " poäng!");
 
+        System.out.println("Du fick " + antalRätt + " av " + frågor.length + " rätt!");
+        TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRatt);
+        
     }
 }
