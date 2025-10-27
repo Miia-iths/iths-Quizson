@@ -16,13 +16,8 @@ public class RandomQuiz1 {
         Collections.shuffle(allaFrågor);
 
         int antalRätt = 0;
-        long startTidFraga = 0;
-        long totalTidFragaMillis = 0;
-        long svarsTid = 0;
-        long startTid = System.currentTimeMillis();
 
         for (int i = 0; i < 10; i++) {
-            startTidFraga = System.currentTimeMillis();
             Fråga f = allaFrågor.get(i);
             System.out.println("\nFråga " + (i + 1) + ": ");
             f.visaFråga();
@@ -38,14 +33,11 @@ public class RandomQuiz1 {
                 System.out.println("✅ Rätt svar!");
                 System.out.println();
                 antalRätt++;
-                totalTidFragaMillis += svarsTid;
             } else {
                 System.out.println("❌ Fel! Rätt svar var: " + f.alternativ[f.rättSvarIndex - 1]);
                 System.out.println();
             }
         }
-        
-        long slutTid = System.currentTimeMillis();
 
         System.out.println("Du fick " + antalRätt + " av 10 rätt!");
         TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRatt);
