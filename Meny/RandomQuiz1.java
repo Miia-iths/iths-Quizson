@@ -24,11 +24,13 @@ public class RandomQuiz1 {
 
             int svar = ValideraInput.läsHeltalIInterval(scanner, 1, 4, "Ditt svar (1-4): ");
 
-            if (svar == f.rättSvarIndex) {
-                System.out.println("✅ Rätt svar!");
+            if (svar == f.rättSvar) {
+                System.out.println("Rätt svar!");
+                System.out.println();
                 antalRätt++;
             } else {
-                System.out.println("❌ Fel! Rätt svar var: " + f.alternativ[f.rättSvarIndex - 1]);
+                System.out.println("Fel svar! Rätt svar var: " + f.svarsAlternativ[f.rättSvar - 1]);
+                System.out.println();
             }
         }
 
