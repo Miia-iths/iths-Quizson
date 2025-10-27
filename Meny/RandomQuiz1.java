@@ -31,6 +31,7 @@ public class RandomQuiz1 {
             System.out.print("Ditt svar (1-4): ");
             int svar = scan.nextInt();
 
+            if (svar == f.rättSvar) {
             long slutTidFraga = System.currentTimeMillis();
             svarsTid = slutTidFraga - startTidFraga;
 
@@ -38,11 +39,12 @@ public class RandomQuiz1 {
                 System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
             } else if (svar == f.rättSvarIndex) {
                 System.out.println("Rätt svar!");
+                System.out.println();
                 antalRätt++;
                 totalTidFragaMillis += svarsTid;
             } else {
-                System.out.println(f.alternativ[f.rättSvarIndex - 1]);
-                //ÄNDRA
+                System.out.println("Fel svar! Rätt svar var: " + f.svarsAlternativ[f.rättSvar - 1]);
+                System.out.println();
             }
         }
         
