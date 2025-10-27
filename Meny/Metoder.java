@@ -39,7 +39,7 @@ public class Metoder{
         long slutTid = System.currentTimeMillis();
 
         System.out.println("Du fick " + antalRätt + " av " + frågor.length + " rätt!");
-        TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRatt);
+        TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRätt);
         
     }
 }
