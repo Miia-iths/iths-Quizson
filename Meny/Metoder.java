@@ -29,10 +29,12 @@ public class Metoder{
             System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
         } else if (svar == rättSvar[i]) {
             System.out.println("Rätt svar!");
+            System.out.println();
             antalRätt++;
             totalTidFragaMillis += svarsTid;
         } else {
             System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
+            System.out.println();
         }
     }
     

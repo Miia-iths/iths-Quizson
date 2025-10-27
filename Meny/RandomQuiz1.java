@@ -28,9 +28,11 @@ public class RandomQuiz1 {
 
             if (svar == f.rättSvar) {
                 System.out.println("Rätt svar!");
+                System.out.println();
                 antalRätt++;
             } else {
                 System.out.println("Fel svar! Rätt svar var: " + f.svarsAlternativ[f.rättSvar - 1]);
+                System.out.println();
             }
         }
 
