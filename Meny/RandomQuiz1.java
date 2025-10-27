@@ -37,7 +37,7 @@ public class RandomQuiz1 {
 
             if (svarsTid > 60000) {
                 System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
-            } else if (svar == f.rättSvarIndex) {
+            } else if (svar == f.rättSvar) {
                 System.out.println("Rätt svar!");
                 System.out.println();
                 antalRätt++;
