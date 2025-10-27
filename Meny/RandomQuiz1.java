@@ -26,12 +26,11 @@ public class RandomQuiz1 {
             System.out.print("Ditt svar (1-4): ");
             int svar = scan.nextInt();
 
-            if (svar == f.rättSvarIndex) {
+            if (svar == f.rättSvar) {
                 System.out.println("Rätt svar!");
                 antalRätt++;
             } else {
-                System.out.println(f.alternativ[f.rättSvarIndex - 1]);
-                //ÄNDRA
+                System.out.println("Fel svar! Rätt svar var: " + f.svarsAlternativ[f.rättSvar - 1]);
             }
         }
 
