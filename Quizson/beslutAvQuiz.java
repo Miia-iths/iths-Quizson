@@ -11,7 +11,7 @@ public class beslutAvQuiz {
         System.out.println("Dags att välja ett av alternativen: ");
         System.out.println("1. Blandade kategorier");
         System.out.println("2. Specefika kategorier");
-        System.out.print("Ditt val: ");
+        System.out.print("Ditt val (1-2): ");
 
         int val = scanner.nextInt();
 
