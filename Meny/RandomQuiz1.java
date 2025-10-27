@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class RandomQuiz1 {
-    public static void startQuiz(){
-        ArrayList<Fråga> allaFrågor = new ArrayList<>();
 
+    public static void startQuiz(Scanner scanner) {
+        ArrayList<Fråga> allaFrågor = new ArrayList<>();
         allaFrågor.addAll(Questions2.allmänbildningsQuiz());
         allaFrågor.addAll(Questions2.sportQuiz());
         allaFrågor.addAll(Questions2.vetenskapQuiz());
@@ -15,7 +15,6 @@ public class RandomQuiz1 {
 
         Collections.shuffle(allaFrågor);
 
-        Scanner scan = new Scanner(System.in);
         int antalRätt = 0;
         long startTidFraga = 0;
         long totalTidFragaMillis = 0;
@@ -25,11 +24,10 @@ public class RandomQuiz1 {
         for (int i = 0; i < 10; i++) {
             startTidFraga = System.currentTimeMillis();
             Fråga f = allaFrågor.get(i);
-            System.out.println("Fråga " + (i + 1) + ": ");
+            System.out.println("\nFråga " + (i + 1) + ": ");
             f.visaFråga();
 
-            System.out.print("Ditt svar (1-4): ");
-            int svar = scan.nextInt();
+            int svar = ValideraInput.läsHeltalIInterval(scanner, 1, 4, "Ditt svar (1-4): ");
 
             long slutTidFraga = System.currentTimeMillis();
             svarsTid = slutTidFraga - startTidFraga;
@@ -37,19 +35,19 @@ public class RandomQuiz1 {
             if (svarsTid > 60000) {
                 System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
             } else if (svar == f.rättSvarIndex) {
-                System.out.println("Rätt svar!");
+                System.out.println("✅ Rätt svar!");
                 antalRätt++;
                 totalTidFragaMillis += svarsTid;
             } else {
-                System.out.println(f.alternativ[f.rättSvarIndex - 1]);
-                //ÄNDRA
+                System.out.println("❌ Fel! Rätt svar var: " + f.alternativ[f.rättSvarIndex - 1]);
             }
         }
         
-        long slutTid = System.currentTimeMillis();
+        long slutTid = System.currentTimeMillis();S
 
         System.out.println("Du fick " + antalRätt + " av 10 rätt!");
         TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRatt);
 
+        System.out.println("\n🎯 Du fick " + antalRätt + " av 10 rätt!");
     }
 }
