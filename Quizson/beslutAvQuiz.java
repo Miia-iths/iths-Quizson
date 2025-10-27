@@ -3,7 +3,7 @@ package Quizson;
 import java.util.Scanner;
 
 public class beslutAvQuiz {
-    
+
     public static int beslut(){
         Scanner scanner = new Scanner(System.in);
 

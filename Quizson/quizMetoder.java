@@ -11,7 +11,7 @@ public class quizMetoder{
         long svarsTid = 0;
         long startTid = System.currentTimeMillis();
         for (int i = 0; i < fragor.length; i++) {
-        
+
         startTidFraga = System.currentTimeMillis();
         System.out.println("Fråga " + (i + 1) + ": " + fragor[i]);
 
@@ -30,13 +30,13 @@ public class quizMetoder{
         } else if (svar == rattSvar[i]) {
             System.out.println("Rätt svar!");
             System.out.println();
-            antalRätt++;
+            antalRatt++;
             totalTidFragaMillis += svarsTid;
         } else {
-            System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
+            System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rattSvar[i] - 1]);
             System.out.println();
             startTidFraga = System.currentTimeMillis();
-            System.out.println("Fråga " + (i + 1) + ": " + frågor[i]);
+            System.out.println("Fråga " + (i + 1) + ": " + fragor[i]);
 
             for (String alt : svarsAlternativ[i]) {
                 System.out.println(alt);
@@ -50,15 +50,15 @@ public class quizMetoder{
 
             if (svarsTid > 60000) {
                 System.out.println("Du tog för lång tid! max svarstid är 60 sekunder.");
-            } else if (svar == rättSvar[i]) {
+            } else if (svar == rattSvar[i]) {
                 System.out.println("Rätt svar!");
-                antalRätt++;
+                antalRatt++;
                 totalTidFragaMillis += svarsTid;
             } else {
-                System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rättSvar[i] - 1]);
+                System.out.println("Fel svar! Rätt svar var: " + svarsAlternativ[i][rattSvar[i] - 1]);
             }
         }
-    
+
     long slutTid = System.currentTimeMillis();
 
     System.out.println("Du fick " + antalRatt + " av " + fragor.length + " rätt!");
@@ -75,8 +75,8 @@ public class quizMetoder{
     int totalPoang = totalMaxSekunder - totalTidFragaSekunder;
     System.out.println("Du svarade de " + antalRatt + " frågorna på sammanlagt " + totalTidFragaSekunder + " sekunder vilket leder till " + totalPoang + " poäng!");
 
-        System.out.println("Du fick " + antalRätt + " av " + frågor.length + " rätt!");
+        System.out.println("Du fick " + antalRatt + " av " + fragor.length + " rätt!");
         TidOchPoang.tidPoang(slutTid, startTid, startTidFraga, totalTidFragaMillis, antalRatt);
-        
     }
+}
 }
