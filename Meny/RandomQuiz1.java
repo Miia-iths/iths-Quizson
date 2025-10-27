@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class RandomQuiz1 {
-    public static void startQuiz(){
-        ArrayList<Fråga> allaFrågor = new ArrayList<>();
 
+    public static void startQuiz(Scanner scanner) {
+        ArrayList<Fråga> allaFrågor = new ArrayList<>();
         allaFrågor.addAll(Questions2.allmänbildningsQuiz());
         allaFrågor.addAll(Questions2.sportQuiz());
         allaFrågor.addAll(Questions2.vetenskapQuiz());
@@ -15,16 +15,14 @@ public class RandomQuiz1 {
 
         Collections.shuffle(allaFrågor);
 
-        Scanner scan = new Scanner(System.in);
         int antalRätt = 0;
 
         for (int i = 0; i < 10; i++) {
             Fråga f = allaFrågor.get(i);
-            System.out.println("Fråga " + (i + 1) + ": ");
+            System.out.println("\nFråga " + (i + 1) + ": ");
             f.visaFråga();
 
-            System.out.print("Ditt svar (1-4): ");
-            int svar = scan.nextInt();
+            int svar = ValideraInput.läsHeltalIInterval(scanner, 1, 4, "Ditt svar (1-4): ");
 
             if (svar == f.rättSvar) {
                 System.out.println("Rätt svar!");
@@ -36,6 +34,6 @@ public class RandomQuiz1 {
             }
         }
 
-        System.out.println("Du fick " + antalRätt + " av 10 rätt!");
+        System.out.println("\n🎯 Du fick " + antalRätt + " av 10 rätt!");
     }
 }
